@@ -180,3 +180,21 @@ button:hover {
         font-size: 12px;
     }
 }
+
+/* Ajuste para as fotos dos produtos */
+.item-presente img {
+    width: 100%;
+    height: 180px; /* Altura fixa para manter o padrão */
+    object-fit: contain; /* Ajusta a foto sem esticar ou cortar */
+    background-color: #fff; /* Fundo branco caso a foto seja pequena */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Garante que o grid se comporte bem com as fotos */
+#lista-presentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
