@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Presença - Chá de Panela</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="presentes.html">Lista de Presentes</a></li>
+            <li><a href="presenca.html" class="active">Confirmar Presença</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>Confirmar Presença</h2>
+            <p style="margin-bottom: 25px; font-size: 0.9rem; color: #666;">
+                Avise-nos se você poderá comparecer!
+            </p>
+            
+            <form id="form-presenca">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Ex: João Silva">
+                </div>
+                
+                <div class="input-group">
+                    <label for="qtd">Quantidade de Pessoas</label>
+                    <input type="number" id="qtd" value="1" min="1" required>
+                </div>
+
+                <button type="submit" id="btn-confirmar">Confirmar Presença</button>
+            </form>
+
+            <div id="feedback" style="display: none; margin-top: 20px;">
+                <h3 style="color: #27ae60;">🎉 Presença Confirmada!</h3>
+                <p>Ficamos muito felizes. Nos vemos lá!</p>
+                <a href="index.html" style="display: inline-block; margin-top: 15px; color: var(--primaria); text-decoration: none; font-size: 0.9rem;">← Voltar ao Início</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

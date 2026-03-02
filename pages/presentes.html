@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Chá de Panela</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="presentes.html" class="active">Lista de Presentes</a></li>
+            <li><a href="presenca.html">Confirmar Presença</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" style="max-width: 1000px;">
+        
+        <section class="card">
+            <h1>Lista de Presentes</h1>
+            <p style="margin-bottom: 20px; color: #666;">
+                Escolha um item que gostaria de nos presentear. <br>
+                Ao clicar em "Escolher", o item ficará reservado para você.
+            </p>
+        </section>
+
+        <div id="lista-presentes">
+            <p style="grid-column: 1/-1; text-align: center; padding: 50px; color: #888;">
+                Carregando lista de desejos...
+            </p>
+        </div>
+
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
