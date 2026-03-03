@@ -122,3 +122,32 @@ window.injetarItens = () => {
         });
     });
 };
+
+// CONFIGURAÇÃO DA SENHA
+const SENHA_CORRETA = "060625"; 
+
+window.verificarSenha = () => {
+    const senhaDigitada = document.getElementById('senha-input').value;
+    const telaLogin = document.getElementById('login-screen');
+    const conteudoSite = document.getElementById('conteudo-site');
+    const erro = document.getElementById('erro-senha');
+
+    if (senhaDigitada === SENHA_CORRETA) {
+        if(telaLogin) telaLogin.style.display = 'none';
+        if(conteudoSite) conteudoSite.style.display = 'block';
+        // Salva o acesso no navegador do convidado
+        localStorage.setItem('acessoPermitido', 'true');
+    } else {
+        if(erro) erro.style.display = 'block';
+    }
+};
+
+// Verificação automática ao carregar a página
+window.addEventListener('load', () => {
+    if (localStorage.getItem('acessoPermitido') === 'true') {
+        const telaLogin = document.getElementById('login-screen');
+        const conteudoSite = document.getElementById('conteudo-site');
+        if (telaLogin) telaLogin.style.display = 'none';
+        if (conteudoSite) conteudoSite.style.display = 'block';
+    }
+});
